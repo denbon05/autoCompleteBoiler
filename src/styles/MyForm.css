@@ -4,7 +4,6 @@
 }
 
 input {
-  border: 1px solid transparent;
 	background-color: #c4b5b5;
 	border: none;
 	border-radius: 3px;
@@ -24,7 +23,6 @@ input {
 
 .MatchedUsers {
   position: absolute;
-  border: 1px solid #d4d4d4;
 	border: none;
 	z-index: 99;
 	width: 80%;
@@ -47,6 +45,6 @@ input {
 }
 
 .MatcherUser:active {
-  background-color: DodgerBlue;
+  background-color: rgb(83, 167, 170);
   color: #ffffff;
 }
