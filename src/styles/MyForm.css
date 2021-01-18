@@ -1,0 +1,52 @@
+.FormAutocomplete {
+	position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+	background-color: #c4b5b5;
+	border: none;
+	border-radius: 3px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.FormInput {
+  background-color: #eee7e7;
+  width: 90%;
+}
+
+.FormButton {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+
+.MatchedUsers {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+	border: none;
+	z-index: 99;
+	width: 80%;
+  top: 60%;
+  left: 0;
+	right: 0;
+	max-height: 10px;
+}
+
+.MatcherUser {
+	margin-left: -20%;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.MatcherUser:hover {
+  background-color: #e9e9e9;
+}
+
+.MatcherUser:active {
+  background-color: DodgerBlue;
+  color: #ffffff;
+}

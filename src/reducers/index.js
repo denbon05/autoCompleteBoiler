@@ -6,12 +6,13 @@ const form = (
 ) => {
   console.log('action=>', action);
   switch (action.type) {
-    case 'TYPING_STARTED':
-      state.currentValue = action.payload.value;
-      return state;
-    case 'TYPING_SUCCESS':
-      state.users = action.payload.users;
-      return state;
+		case 'TYPING_STARTED':
+			const { value } = action.payload;
+			const currentValue = value;
+      return { ...state, currentValue }
+		case 'TYPING_SUCCESS':
+			const { users } = action.payload;
+			return { ...state, users };
     case 'TYPING_FAILURE':
       state.error = action.payload.error;
       return state;

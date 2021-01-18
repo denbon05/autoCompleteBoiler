@@ -20,15 +20,16 @@ const typingFailure = (error) => ({
 });
 
 export const typingName = (value) => async (dispatch) => {
-  dispatch(typingStarted());
+  dispatch(typingStarted(value));
   try {
-    const res = await axios.get(url);
-    const data = JSON.parse(res);
+		const { data } = await axios.get(url);
     const matchUsers = data
-      .filter((user) => user.username.includes(value));
-    console.log('data=>', data);
-    typingSuccess(matchUsers);
+			.filter((user) => user.username
+				.toLowerCase()
+				.includes(value.toLowerCase()));
+			console.log('matchUsers=>', matchUsers);
+    dispatch(typingSuccess(matchUsers));
   } catch (err) {
-    typingFailure(err.message);
+    dispatch(typingFailure(err.message));
   }
 };

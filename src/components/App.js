@@ -1,10 +1,10 @@
 import React from 'react';
-import MyInput from './MyInput';
+import MyForm from './MyForm';
 
 const App = () => {
   return (
     <>
-      <MyInput />
+      <MyForm />
     </ >
   );
 }
